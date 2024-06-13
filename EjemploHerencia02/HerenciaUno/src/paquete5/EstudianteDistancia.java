@@ -11,6 +11,8 @@ public class EstudianteDistancia extends Estudiante{
     public EstudianteDistancia(String n, String ap, String iden, int e, 
             int numAsg, double costoAsg){
         super(n, ap, iden, e);
+        // Lo que hace es darle valores a sus propias variables y ya no tner que 
+        // utilizar los establecer
         numeroAsignaturas = numAsg;
         costoAsignatura = costoAsg;
     }
