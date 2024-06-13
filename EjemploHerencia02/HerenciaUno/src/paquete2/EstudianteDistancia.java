@@ -1,5 +1,7 @@
 package paquete2;
 
+// Sale un error porque en la superClase existe un contructor 
+// y en la subClase no existe un contructor que podamos utlizar.  
 public class EstudianteDistancia extends Estudiante{
     
     private int numeroAsignaturas;

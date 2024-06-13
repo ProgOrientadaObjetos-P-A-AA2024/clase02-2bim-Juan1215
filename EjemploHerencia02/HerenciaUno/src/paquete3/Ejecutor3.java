@@ -9,7 +9,7 @@ package paquete3;
  *
  * @author reroes
  */
-public class Ejecutor {
+public class Ejecutor3 {
     public static void main(String[] args) {
         
         // Creación de un objeto de tipo EstudianteDistancia
@@ -19,16 +19,13 @@ public class Ejecutor {
         String identificacion = "110011";
         int edad = 36;
         
-        EstudianteDistancia estDistancia = new EstudianteDistancia(nombre, 
+        EstudiantePresencial estudiante = new EstudiantePresencial(nombre, 
                 apellido, identificacion, edad);
-        // Aqui estamos asignadole valores a numero asiganutas y las demas para 
-        // que no tome un valor por defecto
-        estDistancia.establecerNumeroAsginaturas(5);
-        estDistancia.establecerCostoAsignatura(100);
-        estDistancia.calcularMatriculaDistancia();
+        estudiante.establecerCostoCredito(100.2);
+        estudiante.establecerNumeroCreditos(5);
+        estudiante.calcularMatriculaPresencial();
         
-        System.out.println(estDistancia);
-        
+        System.out.println(estudiante);
                 
         
     }

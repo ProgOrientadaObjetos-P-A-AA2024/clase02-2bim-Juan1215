@@ -8,6 +8,7 @@ public class EstudianteDistancia extends Estudiante{
     private double matriculaDistancia;
     
     public EstudianteDistancia(String n, String ap, String iden, int e){
+        // lo que hago en la siguiente linea es llamar al contructor de la superclase
         super(n, ap, iden, e);
     }
     
@@ -41,5 +42,36 @@ public class EstudianteDistancia extends Estudiante{
     public double obtenerMatriculaDistancia(){
         return matriculaDistancia;
     }
-
+    /*
+    @Override
+    public String toString(){
+        String cadena = String.format("Nombre Estudiante:%s\n "
+                + "Numero de asignaturas: %d\n"
+                + "Valor de aignatura: %.2f\n"
+                + "Valor matricula: %.2f\n",
+                obtenerNombresEstudiante(),
+                numeroAsignaturas,
+                costoAsignatura, 
+                obtenerMatriculaDistancia());
+        
+        return cadena;
+    }
+    */
+    // Es esta toString estmos llamndo al superToString ya que aqui ya esta 
+    // formada una cadena 
+    @Override
+    public String toString(){
+        String cadena = String.format("%s\n"
+                + "Numero de asignaturas: %d\n"
+                + "Valor de aignatura: %.2f\n"
+                + "Valor matricula: %.2f\n",
+                super.toString(),
+                numeroAsignaturas,
+                costoAsignatura, 
+                obtenerMatriculaDistancia());
+        
+        return cadena;
+    }
 }
+
+
